@@ -112,6 +112,7 @@ namespace PraktikumADO
             }
         }
 
+        private void txtHasil_TextChanged(object sender, EventArgs e)
 
 
 
