@@ -21,5 +21,15 @@ namespace PraktikumADO
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtHasil.Text = "";
+        }
 
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+                "Data Source=PAIQQQQQQQQ\\FAIQ;Initial Catalog=DBAkademikAD0;Integrated Security=True"
+            );
+        }
 
