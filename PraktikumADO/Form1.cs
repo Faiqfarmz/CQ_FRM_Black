@@ -101,6 +101,11 @@ namespace PraktikumADO
                 string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='2311010001'";
                 cmd = new SqlCommand(query, conn);
 
-    
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil terupdate: " + hasil + " baris");
+
+                conn.Close();
+            }
+
 
 
