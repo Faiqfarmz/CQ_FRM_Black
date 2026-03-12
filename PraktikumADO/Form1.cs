@@ -106,6 +106,6 @@ namespace PraktikumADO
 
                 conn.Close();
             }
-
+            catch (Exception ex)
 
 
