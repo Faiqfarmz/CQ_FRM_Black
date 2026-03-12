@@ -21,6 +21,7 @@ namespace PraktikumADO
         {
             InitializeComponent();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             txtHasil.Text = "";
@@ -29,7 +30,22 @@ namespace PraktikumADO
         private void Koneksi()
         {
             conn = new SqlConnection(
-                "Data Source=PAIQQQQQQQQ\\FAIQ;Initial Catalog=DBAkademikAD0;Integrated Security=True"
+                "Data Source=DESKTOP-RAM2OFI\\APRILIYA;Initial Catalog=DBAkademikAD0;Integrated Security=True"
             );
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+                MessageBox.Show("Koneksi ke database berhasil");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
